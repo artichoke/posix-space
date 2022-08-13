@@ -17,7 +17,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![cfg_attr(docsrs, feature(doc_alias))]
 
-//! A small crate which determines if a byte is classified as a POSIX space per
+//! A small crate which determines if a byte is classified as a space in the POSIX locale
 //! [POSIX.1-2017], chapter 7, [Locale].
 //!
 //! [POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html
@@ -29,6 +29,11 @@
 //! >
 //! > In the POSIX locale, exactly \<space\>, \<form-feed\>, \<newline\>, \<carriage-return\>,
 //! > \<tab\>, and \<vertical-tab\> shall be included.
+//!
+//! The function defined in this crate should have equivalent behavior to the C
+//! fucntion [`isspace`] as defined in `ctype.h`.
+//!
+//! [`isspace`]: https://linux.die.net/man/3/isspace
 
 #![doc(html_root_url = "https://docs.rs/posix-space/1.0.0")]
 #![no_std]
