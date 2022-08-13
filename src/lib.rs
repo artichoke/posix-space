@@ -17,6 +17,72 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![cfg_attr(docsrs, feature(doc_alias))]
 
+//! A small crate which determines if a byte is classified as a POSIX space per
+//! [POSIX.1-2017], chapter 7, [Locale].
+//!
+//! [POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html
+//! [Locale]: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap07.html
+//!
+//! > **space**
+//! >
+//! > Define characters to be classified as white-space characters.
+//! >
+//! > In the POSIX locale, exactly \<space\>, \<form-feed\>, \<newline\>, \<carriage-return\>,
+//! > \<tab\>, and \<vertical-tab\> shall be included.
+
+#![doc(html_root_url = "https://docs.rs/posix-space/0.1.0")]
+#![no_std]
+
+// Ensure code blocks in README.md compile
+#[cfg(doctest)]
+macro_rules! readme {
+    ($x:expr) => {
+        #[doc = $x]
+        mod readme {}
+    };
+    () => {
+        readme!(include_str!("../README.md"));
+    };
+}
+#[cfg(doctest)]
+readme!();
+
+/// Determine whether the given byte is in **space** POSIX character class.
+///
+/// In the POSIX locale, exactly \<space\>, \<form-feed\>, \<newline\>,
+/// \<carriage-return\>, \<tab\>, and \<vertical-tab\> shall be included.
+///
+/// # Compatibility
+///
+/// This function differs from [`u8::is_ascii_whitespace`] in that \<vertical-tab\>,
+/// `\x0B`, is considered a **space**.
+///
+/// # Examples
+///
+/// ```
+/// assert!(posix_space::is_space(b' '));
+/// assert!(posix_space::is_space(b'\x0C'));
+/// assert!(posix_space::is_space(b'\n'));
+/// assert!(posix_space::is_space(b'\r'));
+/// assert!(posix_space::is_space(b'\t'));
+/// assert!(posix_space::is_space(b'\x0B'));
+/// ```
+///
+/// Other ASCII characters are not POSIX spaces:
+///
+/// ```
+/// assert!(!posix_space::is_space(b'C'));
+/// assert!(!posix_space::is_space(b'&'));
+/// assert!(!posix_space::is_space(b'\x7F'));
+/// ```
+///
+/// Non-ASCII bytes are not POSIX spaces:
+///
+/// ```
+/// assert!(!posix_space::is_space(b'\x80'));
+/// assert!(!posix_space::is_space(b'\xFF'));
+/// ```
+#[must_use]
 pub fn is_space(byte: u8) -> bool {
     byte.is_ascii_whitespace() || byte == b'\x0B'
 }
