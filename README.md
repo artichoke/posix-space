@@ -8,8 +8,8 @@
 [![API](https://docs.rs/posix-space/badge.svg)](https://docs.rs/posix-space)
 [![API trunk](https://img.shields.io/badge/docs-trunk-blue.svg)](https://artichoke.github.io/posix-space/posix_space/)
 
-A small crate which determines if a byte is classified as a POSIX space per
-[POSIX.1-2017], chapter 7, [Locale].
+A small crate which determines if a byte is classified as a space in the POSIX
+locale [POSIX.1-2017], chapter 7, [Locale].
 
 [posix.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html
 [locale]:
@@ -21,6 +21,11 @@ A small crate which determines if a byte is classified as a POSIX space per
 >
 > In the POSIX locale, exactly \<space\>, \<form-feed\>, \<newline\>,
 > \<carriage-return\>, \<tab\>, and \<vertical-tab\> shall be included.
+
+The function defined in this crate should have equivalent behavior to the C
+fucntion [`isspace`] as defined in `ctype.h`.
+
+[`isspace`]: https://linux.die.net/man/3/isspace
 
 ## Usage
 
