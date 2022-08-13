@@ -18,7 +18,7 @@
 #![cfg_attr(docsrs, feature(doc_alias))]
 
 pub fn is_space(byte: u8) -> bool {
-    false
+    byte.is_ascii_whitespace() || byte == b'\x0B'
 }
 
 #[cfg(test)]
