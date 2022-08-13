@@ -17,8 +17,8 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![cfg_attr(docsrs, feature(doc_alias))]
 
-//! A small crate which determines if a byte is classified as a space in the POSIX locale
-//! [POSIX.1-2017], chapter 7, [Locale].
+//! A small crate which determines if a byte is classified as a space in the
+//! POSIX locale per [POSIX.1-2017], chapter 7, [Locale].
 //!
 //! [POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html
 //! [Locale]: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap07.html
@@ -35,7 +35,7 @@
 //!
 //! [`isspace`]: https://linux.die.net/man/3/isspace
 
-#![doc(html_root_url = "https://docs.rs/posix-space/1.0.0")]
+#![doc(html_root_url = "https://docs.rs/posix-space/1.0.1")]
 #![no_std]
 
 // Ensure code blocks in README.md compile
