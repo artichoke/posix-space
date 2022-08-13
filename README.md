@@ -33,7 +33,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-posix-space = "1.0.1"
+posix-space = "1.0.2"
 ```
 
 Then classify bytes like:

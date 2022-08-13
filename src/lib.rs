@@ -10,6 +10,7 @@
 #![warn(unsafe_op_in_unsafe_fn)]
 #![warn(unused_qualifications)]
 #![warn(variant_size_differences)]
+#![forbid(unsafe_code)]
 // Enable feature callouts in generated documentation:
 // https://doc.rust-lang.org/beta/unstable-book/language-features/doc-cfg.html
 //
@@ -35,7 +36,7 @@
 //!
 //! [`isspace`]: https://linux.die.net/man/3/isspace
 
-#![doc(html_root_url = "https://docs.rs/posix-space/1.0.1")]
+#![doc(html_root_url = "https://docs.rs/posix-space/1.0.2")]
 #![no_std]
 
 // Ensure code blocks in README.md compile
