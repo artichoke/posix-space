@@ -28,7 +28,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-posix-space = "0.1.0"
+posix-space = "1.0.0"
 ```
 
 Then classify bytes like:
@@ -38,10 +38,19 @@ assert!(posix_space::is_space(b' '));
 assert!(posix_space::is_space(b'\t'));
 assert!(posix_space::is_space(b'\r'));
 
-
 assert!(!posix_space::is_space(b'\0'));
 assert!(!posix_space::is_space(b'C'));
 assert!(!posix_space::is_space(b'&'));
+```
+
+This crate's behavior differs from [`u8::is_ascii_whitespace`] in the Rust
+standard library in that \<vertical-tab\>, `\x0B`, is considered a **space**.
+
+[`u8::is_ascii_whitespace`]:
+  https://doc.rust-lang.org/stable/std/primitive.u8.html#method.is_ascii_whitespace
+
+```rust
+assert!(posix_space::is_space(b'\x0B'));
 ```
 
 ## Crate features

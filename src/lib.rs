@@ -30,7 +30,7 @@
 //! > In the POSIX locale, exactly \<space\>, \<form-feed\>, \<newline\>, \<carriage-return\>,
 //! > \<tab\>, and \<vertical-tab\> shall be included.
 
-#![doc(html_root_url = "https://docs.rs/posix-space/0.1.0")]
+#![doc(html_root_url = "https://docs.rs/posix-space/1.0.0")]
 #![no_std]
 
 // Ensure code blocks in README.md compile
