@@ -290,7 +290,7 @@ mod tests {
     #[test]
     fn space_character_class() {
         let test_cases = BYTE_TO_POSIX_SPACE;
-        for (byte, is_posix_space, display) in test_cases {
+        for &(byte, is_posix_space, display) in test_cases.iter() {
             assert_eq!(
                 is_space(byte),
                 is_posix_space,
