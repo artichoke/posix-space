@@ -9,7 +9,7 @@
 [![API trunk](https://img.shields.io/badge/docs-trunk-blue.svg)](https://artichoke.github.io/posix-space/posix_space/)
 
 A small crate which determines if a byte is classified as a space in the POSIX
-locale [POSIX.1-2017], chapter 7, [Locale].
+locale per [POSIX.1-2017], chapter 7, [Locale].
 
 [posix.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/mindex.html
 [locale]:
@@ -33,7 +33,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-posix-space = "1.0.0"
+posix-space = "1.0.1"
 ```
 
 Then classify bytes like:
