@@ -39,20 +39,6 @@
 #![doc(html_root_url = "https://docs.rs/posix-space/1.0.2")]
 #![no_std]
 
-// Ensure code blocks in README.md compile
-#[cfg(doctest)]
-macro_rules! readme {
-    ($x:expr) => {
-        #[doc = $x]
-        mod readme {}
-    };
-    () => {
-        readme!(include_str!("../README.md"));
-    };
-}
-#[cfg(doctest)]
-readme!();
-
 /// Determine whether the given byte is in **space** POSIX character class.
 ///
 /// In the POSIX locale, exactly \<space\>, \<form-feed\>, \<newline\>,
@@ -387,3 +373,20 @@ mod tests {
         }
     }
 }
+
+// Ensure code blocks in README.md compile
+//
+// This module and macro declaration should be kept at the end of the file, in
+// order to not interfere with code coverage.
+#[cfg(doctest)]
+macro_rules! readme {
+    ($x:expr) => {
+        #[doc = $x]
+        mod readme {}
+    };
+    () => {
+        readme!(include_str!("../README.md"));
+    };
+}
+#[cfg(doctest)]
+readme!();
