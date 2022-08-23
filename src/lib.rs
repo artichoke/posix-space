@@ -349,27 +349,17 @@ mod tests {
     fn space_character_class() {
         let test_cases = BYTE_TO_POSIX_SPACE;
         for &(byte, is_posix_space, display) in test_cases.iter() {
-            assert_eq!(
-                is_space(byte),
-                is_posix_space,
-                "Mismatch for {} - {}",
-                byte,
-                display
-            );
+            assert_eq!(is_space(byte), is_posix_space, "{} - {}", byte, display);
         }
     }
 
     #[test]
     fn non_ascii_bytes_are_not_posix_spaces() {
-        for byte in 0..core::u8::MAX {
+        for byte in 0..=core::u8::MAX {
             if byte.is_ascii() {
                 continue;
             }
-            assert!(
-                !is_space(byte),
-                "non-ascii byte {} was classified as a POSIX space",
-                byte
-            );
+            assert!(!is_space(byte), "for byte {}", byte);
         }
     }
 }
