@@ -32,11 +32,11 @@
 //! > \<tab\>, and \<vertical-tab\> shall be included.
 //!
 //! The function defined in this crate should have equivalent behavior to the C
-//! fucntion [`isspace`] as defined in `ctype.h`.
+//! function [`isspace`] as defined in `ctype.h`.
 //!
 //! [`isspace`]: https://linux.die.net/man/3/isspace
 
-#![doc(html_root_url = "https://docs.rs/posix-space/1.0.2")]
+#![doc(html_root_url = "https://docs.rs/posix-space/1.0.3")]
 #![no_std]
 
 /// Determine whether the given byte is in **space** POSIX character class.
@@ -364,7 +364,7 @@ mod tests {
     }
 }
 
-// Ensure code blocks in README.md compile
+// Ensure code blocks in `README.md` compile.
 //
 // This module and macro declaration should be kept at the end of the file, in
 // order to not interfere with code coverage.
