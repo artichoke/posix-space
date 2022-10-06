@@ -23,7 +23,7 @@ locale per [POSIX.1-2017], chapter 7, [Locale].
 > \<carriage-return\>, \<tab\>, and \<vertical-tab\> shall be included.
 
 The function defined in this crate should have equivalent behavior to the C
-fucntion [`isspace`] as defined in `ctype.h`.
+function [`isspace`] as defined in `ctype.h`.
 
 [`isspace`]: https://linux.die.net/man/3/isspace
 
