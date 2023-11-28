@@ -5,6 +5,9 @@
     },
     {
       "pattern": "^https://twitter.com/artichokeruby"
+    },
+    {
+      "pattern": "https://linux.die.net/man/3/isspace"
     }
   ],
   "replacementPatterns": [],
