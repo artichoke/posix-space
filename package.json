@@ -1,0 +1,21 @@
+{
+  "name": "@artichokeruby/posix-space",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Determine if a byte is a space in the POSIX locale",
+  "keywords": [
+    "posix",
+    "locale",
+    "rust"
+  ],
+  "repository": "github:artichoke/posix-space",
+  "author": "Ryan Lopopolo <rjl@hyperbo.la> (https://hyperbo.la/)",
+  "homepage": "https://www.artichokeruby.org",
+  "bugs": "https://github.com/artichoke/posix-space/issues",
+  "devDependencies": {
+    "prettier": "3.2.5"
+  },
+  "scripts": {
+    "fmt": "prettier --write \"**/*\""
+  }
+}
