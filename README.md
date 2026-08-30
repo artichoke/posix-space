@@ -5,7 +5,6 @@
 <br>
 [![Crate](https://img.shields.io/crates/v/posix-space.svg)](https://crates.io/crates/posix-space)
 [![API](https://docs.rs/posix-space/badge.svg)](https://docs.rs/posix-space)
-[![API trunk](https://img.shields.io/badge/docs-trunk-blue.svg)](https://artichoke.github.io/posix-space/posix_space/)
 
 A small crate which determines if a byte is classified as a space in the POSIX
 locale per [POSIX.1-2017], chapter 7, [Locale].
