@@ -6,6 +6,10 @@
 [![Crate](https://img.shields.io/crates/v/posix-space.svg)](https://crates.io/crates/posix-space)
 [![API](https://docs.rs/posix-space/badge.svg)](https://docs.rs/posix-space)
 
+> [!NOTE]  
+> This crate is feature complete and frozen. It will not receive further
+> development.
+
 A small crate which determines if a byte is classified as a space in the POSIX
 locale per [POSIX.1-2017], chapter 7, [Locale].
 
@@ -31,7 +35,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-posix-space = "1.0.4"
+posix-space = "1.0.5"
 ```
 
 Then classify bytes like:
