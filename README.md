@@ -1,7 +1,6 @@
 # posix-space
 
 [![GitHub Actions](https://github.com/artichoke/posix-space/workflows/CI/badge.svg)](https://github.com/artichoke/posix-space/actions)
-[![Code Coverage](https://codecov.artichokeruby.org/posix-space/badges/flat.svg?nocache=2)](https://codecov.artichokeruby.org/posix-space/index.html)
 [![Twitter](https://img.shields.io/twitter/follow/artichokeruby?label=Follow&style=social)](https://twitter.com/artichokeruby)
 <br>
 [![Crate](https://img.shields.io/crates/v/posix-space.svg)](https://crates.io/crates/posix-space)

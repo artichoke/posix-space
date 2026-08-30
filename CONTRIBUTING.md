@@ -165,7 +165,7 @@ cargo clippy --all-targets --all-features
 To lint and format text sources run:
 
 ```sh
-npx prettier --write '**/*'
+pnpm exec prettier --write '**/*'
 ```
 
 ## Testing
