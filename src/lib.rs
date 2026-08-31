@@ -35,7 +35,7 @@
 //!
 //! [`isspace`]: https://linux.die.net/man/3/isspace
 
-#![doc(html_root_url = "https://docs.rs/posix-space/1.0.4")]
+#![doc(html_root_url = "https://docs.rs/posix-space/1.0.5")]
 #![no_std]
 
 /// Determine whether the given byte is in **space** POSIX character class.
